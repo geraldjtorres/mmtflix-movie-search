@@ -40,6 +40,7 @@ export const StyledModalText = styled.div`
 
   @media (max-width: ${({ theme }) => theme.tablet}) {
     height: 320px;
+    overflow: initial;
   }
 `
 
@@ -81,6 +82,8 @@ export const StyledModal = styled.div`
   border-radius: 5px;
   padding: 25px;
   position: relative;
+  overflow: hidden;
+  z-index: 30;
 
   @media (max-width: ${({ theme }) => theme.tablet}) {
     height: 80%;
@@ -89,10 +92,11 @@ export const StyledModal = styled.div`
   @media (max-width: ${({ theme }) => theme.mobile}) {
     height: 90%;
     width: 90%;
+    overflow: scroll;
   }
 `
 export const StyledModalOverlay = styled.div`
-  z-index: 999;
+  z-index: 20;
   position: fixed;
   width: 100%;
   height: 100%;
